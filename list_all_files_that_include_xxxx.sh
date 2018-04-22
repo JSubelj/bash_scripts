@@ -1,6 +1,7 @@
 #!/bin/bash
 
-
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
 find . -type f |
 while read filename
 	do
@@ -12,4 +13,4 @@ while read filename
 		fi
 		
 	done
-
+IFS=$SAVEIFS
